@@ -43,12 +43,10 @@ class ApplicationController < Sinatra::Base
     @recipe.cook_time = params[:cook_time]
     @recipe.save
     redirect "/recipes/#{@recipe.id}" #DOES NOT WORK???
-    # redirect '/recipes'
   end
 
   #[D]elete action
   post '/recipes/:id/delete' do
-  # delete '/recipes/:id/delete' do  // DOES NOT WORK???
   @recipe = Recipe.destroy(params[:id])
   redirect '/recipes'
   end
