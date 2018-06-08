@@ -1,3 +1,5 @@
+require 'pry'
+
 class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
@@ -36,7 +38,7 @@ class ApplicationController < Sinatra::Base
   end
 
   #[U]pdates a recipe
-  patch '/recipes/:id' do
+  post '/recipes/:id' do #patch doesnt work?
     @recipe = Recipe.find_by(id: params[:id])
     @recipe.name = params[:name]
     @recipe.ingredients = params[:ingredients]
