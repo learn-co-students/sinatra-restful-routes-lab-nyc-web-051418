@@ -8,6 +8,7 @@ gem 'sqlite3'
 gem 'tux'
 gem 'rake'
 gem 'require_all'
+gem 'pry'
 gem 'shotgun'
 gem 'json', '>=1.8.3'
 
